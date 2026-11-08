@@ -212,6 +212,88 @@
     .itin .foot .btn{flex:1;justify-content:center;padding:13px 12px;letter-spacing:.14em;white-space:nowrap}
   }
 
+  /* today panel */
+  .today{padding:0 0 80px}
+  .today-box{border:1px solid var(--line);background:linear-gradient(180deg,rgba(201,160,106,.06),transparent 60%);display:grid;grid-template-columns:1.1fr 1fr;position:relative}
+  .today-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:26px 30px 0;grid-column:1/-1}
+  .today-head h2{font-size:clamp(1.7rem,3vw,2.3rem);margin:0}
+  .days{display:flex;gap:6px}
+  .days button{background:none;border:1px solid rgba(201,160,106,.3);color:var(--muted);padding:8px 14px;font:400 .68rem var(--sans);letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+  .days button.on{border-color:var(--gold);color:#111;background:var(--gold)}
+  .wx{padding:24px 30px 30px;display:grid;grid-template-columns:auto 1fr;gap:6px 26px;align-items:center;align-content:start}
+  .wx .big{display:flex;align-items:center;gap:16px;grid-column:1/-1;margin-bottom:14px}
+  .wx .big svg{width:62px;height:62px;stroke:var(--gold-hi);fill:none;stroke-width:1.3}
+  .wx .temp{font-family:var(--serif);font-size:3.6rem;line-height:1}
+  .wx .cond{color:var(--muted);font-size:.9rem;line-height:1.4}
+  .stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(201,160,106,.15)}
+  .stat{padding:14px 10px 0 0}
+  .stat .k{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+  .stat .v{font-family:var(--serif);font-size:1.45rem;line-height:1.2;margin-top:4px;display:flex;align-items:center;gap:6px}
+  .stat .v small{font-family:var(--sans);font-size:.72rem;color:var(--muted)}
+  .stat .arrow{width:16px;height:16px;fill:var(--gold-hi);transition:transform .4s}
+  .wind-name{grid-column:1/-1;color:var(--muted);font-size:.82rem;margin-top:10px}
+  .pick{border-left:1px solid var(--line);padding:24px 30px 30px;display:flex;flex-direction:column}
+  .pick .eyebrow{margin-bottom:6px}
+  .pick h3{font-family:var(--serif);font-weight:500;font-size:2rem;line-height:1.1;margin-bottom:10px}
+  .pick p{color:var(--muted);font-size:.92rem}
+  .pick ul{list-style:none;margin:14px 0 0;font-size:.86rem}
+  .pick li{padding:6px 0;border-top:1px solid rgba(201,160,106,.12);display:flex;gap:10px}
+  .pick li b{color:var(--gold-hi);font-weight:400;min-width:18px}
+  .pick .row-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:20px}
+  .wx-note{grid-column:1/-1;font-size:.72rem;color:var(--muted);padding:0 30px 16px;opacity:.8}
+  .badge{display:inline-block;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold-lo);color:var(--gold);padding:3px 8px;margin-left:8px;vertical-align:middle}
+
+  /* planner */
+  .planner-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:0;border:1px solid var(--line);margin-top:48px;text-align:left}
+  .planmap{position:relative;overflow:hidden;border-right:1px solid var(--line);min-height:420px;background:#0f0f0e}
+  .planmap .map{position:absolute;inset:0;width:100%;height:100%}
+  .planmap .hint{position:absolute;left:16px;bottom:14px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);background:rgba(16,16,16,.8);padding:6px 10px}
+  .ppin{cursor:pointer}
+  .ppin circle{fill:#101010;stroke:var(--gold-lo);stroke-width:1.5;transition:.2s}
+  .ppin:hover circle{stroke:var(--gold-hi)}
+  .ppin.sel circle{fill:var(--gold);stroke:var(--gold-hi)}
+  .ppin text.n{fill:#111;font:600 10px var(--sans);display:none}
+  .ppin.sel text.n{display:block}
+  .ppin text.lb{fill:var(--text);font:500 14px var(--serif);paint-order:stroke;stroke:#0f0f0e;stroke-width:4px;opacity:0;transition:.2s;pointer-events:none}
+  .ppin:hover text.lb,.ppin.sel text.lb{opacity:1}
+  #plan-route path{fill:none}
+  .side{padding:26px 26px 28px;display:flex;flex-direction:column}
+  .grp{margin-bottom:14px}
+  .grp .k{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{background:none;border:1px solid rgba(201,160,106,.28);color:var(--text);padding:7px 11px;font:300 .82rem var(--sans);cursor:pointer;transition:.2s}
+  .chip:hover{border-color:var(--gold)}
+  .chip.sel{background:var(--gold);border-color:var(--gold);color:#111;font-weight:400}
+  .summary{margin-top:10px;border-top:1px solid rgba(201,160,106,.18);padding-top:18px}
+  .summary .order{font-size:.84rem;color:var(--muted);min-height:1.4em}
+  .summary .order b{color:var(--gold-hi);font-weight:400}
+  .sum-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+  .sum-row>div{border:1px solid rgba(201,160,106,.15);padding:10px 12px}
+  .sum-row .k{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .sum-row .v{font-family:var(--serif);font-size:1.35rem;line-height:1.2}
+  .verdict{font-family:var(--serif);font-size:1.35rem;color:var(--gold-hi);line-height:1.3}
+  .verdict small{display:block;font-family:var(--sans);font-size:.8rem;color:var(--muted);margin-top:4px}
+  .side .row-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn.ghost{border-color:rgba(201,160,106,.35);color:var(--muted)}
+  .btn[aria-disabled="true"]{opacity:.4;pointer-events:none}
+
+  @media(max-width:900px){
+    .today-box{grid-template-columns:1fr}
+    .pick{border-left:0;border-top:1px solid var(--line)}
+    .planner-grid{grid-template-columns:1fr}
+    .planmap{border-right:0;border-bottom:1px solid var(--line);min-height:0;aspect-ratio:700/520}
+    .planmap .hint{display:none}
+  }
+  @media(max-width:560px){
+    .today-head,.wx,.pick{padding-left:18px;padding-right:18px}
+    .wx-note{padding:0 18px 14px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .wx .temp{font-size:3rem}
+    .side{padding:20px 16px 22px}
+    .sum-row .v{font-size:1.1rem}
+    .ppin text.lb{font-size:18px}
+  }
+
   .wa-float{position:fixed;right:20px;bottom:20px;z-index:30;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,var(--gold-hi),var(--gold) 60%,var(--gold-lo));box-shadow:0 8px 24px rgba(0,0,0,.5)}
   .wa-float svg{width:28px;height:28px;fill:#111}
 </style>
@@ -223,14 +305,14 @@
     <nav>
       <a class="brand" href="#top"><img src="mono.jpg" alt="Cape Fun monogram"><b class="gold">CAPE FUN</b></a>
       <div class="links">
-        <a href="#tours">Tours</a><a href="#rates">Rates</a><a href="#transfers">Transfers</a><a href="#contact">Contact</a>
+        <a href="#today">Today</a><a href="#tours">Tours</a><a href="#planner">Plan</a><a href="#rates">Rates</a><a href="#transfers">Transfers</a><a href="#contact">Contact</a>
       </div>
       <a class="btn nav-cta" href="https://wa.me/27677414361" target="_blank" rel="noopener">Book now</a>
       <button class="burger" aria-label="Menu" onclick="document.querySelector('header').classList.toggle('open')"><span></span></button>
     </nav>
   </div>
   <div class="mobile-menu" onclick="if(event.target.tagName==='A')document.querySelector('header').classList.remove('open')">
-    <a href="#tours">Tours</a><a href="#rates">Rates</a><a href="#transfers">Transfers</a><a href="#contact">Contact</a>
+    <a href="#today">Today</a><a href="#tours">Tours</a><a href="#planner">Plan</a><a href="#rates">Rates</a><a href="#transfers">Transfers</a><a href="#contact">Contact</a>
     <a class="btn solid" href="https://wa.me/27677414361" target="_blank" rel="noopener">Book on WhatsApp</a>
   </div>
 </header>
@@ -248,6 +330,38 @@
             Book on WhatsApp</a>
           <a class="btn" href="#tours">Explore tours</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="today" id="today">
+    <div class="wrap">
+      <div class="today-box">
+        <div class="today-head">
+          <div><div class="eyebrow">Today in Cape Town<span class="badge" id="wx-badge" hidden>Sample</span></div><h2 class="gold">What's the Cape saying?</h2></div>
+          <div class="days" id="wx-days"></div>
+        </div>
+        <div class="wx" id="wx">
+          <div class="big"><span id="wx-icon"></span><div><div class="temp" id="wx-temp">–</div><div class="cond" id="wx-cond">Loading the forecast…</div></div></div>
+          <div class="stats">
+            <div class="stat"><div class="k">Wind</div><div class="v"><svg class="arrow" id="wx-arrow" viewBox="0 0 16 16"><path d="M8 1 13 14 8 11 3 14Z"/></svg><span id="wx-wind">–</span><small>km/h</small></div></div>
+            <div class="stat"><div class="k">Gusts</div><div class="v"><span id="wx-gust">–</span><small>km/h</small></div></div>
+            <div class="stat"><div class="k">Rain</div><div class="v"><span id="wx-rain">–</span><small>%</small></div></div>
+            <div class="stat"><div class="k">Sunset</div><div class="v" id="wx-sunset">–</div></div>
+          </div>
+          <div class="wind-name" id="wx-windname"></div>
+        </div>
+        <div class="pick">
+          <div class="eyebrow" id="pick-eyebrow">Our pick for today</div>
+          <h3 class="gold" id="pick-title">–</h3>
+          <p id="pick-why"></p>
+          <ul id="pick-tips"></ul>
+          <div class="row-btns">
+            <button class="btn solid" id="pick-itin">See the itinerary</button>
+            <a class="btn" id="pick-book" href="https://wa.me/27677414361" target="_blank" rel="noopener">Book this day</a>
+          </div>
+        </div>
+        <div class="wx-note" id="wx-note">Forecast for central Cape Town. Conditions change quickly here, so we always confirm the plan with you the evening before.</div>
       </div>
     </div>
   </section>
@@ -296,10 +410,39 @@
           <h3>Your Own Day</h3>
           <p>Mix and match, or build something entirely your own.</p>
           <ul><li>Flexible itinerary</li><li>Families &amp; small groups</li><li>Half or full day</li></ul>
-          <a class="itin-btn" href="#contact">Plan my day <span>→</span></a>
+          <a class="itin-btn" href="#planner">Build my day <span>→</span></a>
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section id="planner">
+    <div class="wrap center">
+      <div class="eyebrow">Build your own day</div>
+      <h2 class="gold">Pick the places, we'll plan the route</h2>
+      <p class="intro">Tap the places you'd like to see. We'll work out the best order, how long the day takes, and the price. Then send it to us on WhatsApp in one tap.</p>
+      <div class="rule"><span></span></div>
+      <div class="planner-grid">
+        <div class="planmap" id="planmap"><svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg" class="map" overflow="visible" id="plan-svg"><defs><pattern id="hatch2" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M0 7h6" stroke="#c9a06a" stroke-opacity=".10" stroke-width="1"/></pattern></defs><rect x="-3000" y="-3000" width="7000" height="7000" fill="#0f0f0e"/><rect x="-3000" y="-3000" width="7000" height="7000" fill="url(#hatch2)"/><polygon points="-1026.1,-809.8 8.0,-234.1 119.3,-90.2 135.2,-42.2 159.1,24.9 143.2,48.9 111.4,53.7 99.4,51.8 87.5,53.7 75.6,60.4 67.6,72.9 65.2,87.3 68.4,101.7 63.6,116.1 55.7,135.3 39.8,154.5 43.7,178.4 51.7,188.0 47.7,199.6 54.1,216.8 57.3,236.0 63.6,250.4 35.8,264.8 22.3,284.0 39.8,312.8 63.6,341.6 79.5,394.3 103.4,437.5 131.2,480.7 147.2,493.2 164.7,492.2 155.1,456.7 139.2,413.5 135.2,370.3 128.9,341.6 116.1,332.0 109.8,303.2 111.4,282.1 125.7,272.5 143.2,250.4 175.0,231.2 230.7,214.9 294.3,214.9 358.0,214.9 405.7,245.6 437.5,293.6 453.4,308.0 437.5,370.3 421.6,437.5 429.5,485.5 429.5,523.9 485.2,528.7 803.4,533.5 2155.7,533.5 2155.7,-809.8" fill="#1c1916" stroke="#c9a06a" stroke-width="1.3" stroke-linejoin="round"/><polygon points="59.7,-51.8 71.6,-47.0 75.6,-32.6 63.6,-23.1 55.7,-32.6" fill="#1c1916" stroke="#c9a06a" stroke-width="1"/><text x="15.9" y="389.5" class="sea">Atlantic</text><text x="262.5" y="360.7" class="sea">False Bay</text><text x="31.8" y="34.5" class="sea">Table Bay</text><g id="plan-route"></g><g id="plan-pins"></g></svg><div class="hint">Tap the dots or the names</div></div>
+        <div class="side">
+          <div id="plan-groups"></div>
+          <div class="summary">
+            <div class="order" id="plan-order">Choose a few places to start.</div>
+            <div class="sum-row">
+              <div><div class="k">Driving</div><div class="v" id="plan-drive">–</div></div>
+              <div><div class="k">Visiting</div><div class="v" id="plan-visit">–</div></div>
+              <div><div class="k">Total</div><div class="v" id="plan-total">–</div></div>
+            </div>
+            <div class="verdict" id="plan-verdict"></div>
+            <div class="row-btns">
+              <a class="btn solid" id="plan-send" aria-disabled="true" href="https://wa.me/27677414361" target="_blank" rel="noopener">Send my day on WhatsApp</a>
+              <button class="btn ghost" id="plan-clear">Clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="note">Times are estimates including driving between stops, and pick-up and drop-off at your Cape Town hotel.</p>
     </div>
   </section>
 
@@ -468,6 +611,7 @@
       modal.querySelector('.sheet').scrollTop=0;
       hl(1);
     }
+    window.openTour=open;
     function close(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('lock')}
     document.querySelectorAll('button.itin-btn').forEach(function(b){b.addEventListener('click',function(){open(b.getAttribute('data-tour'))})});
     document.getElementById('m-close').addEventListener('click',close);
@@ -475,6 +619,175 @@
     modal.addEventListener('click',function(e){if(e.target===modal)close()});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
   })();
+</script>
+<script>
+(function(){
+  /* ---------- TODAY IN CAPE TOWN ---------- */
+  var SAMPLE={daily:{time:['d0','d1','d2'],weather_code:[1,3,61],temperature_2m_max:[26,22,18],temperature_2m_min:[16,15,13],wind_speed_10m_max:[34,14,28],wind_gusts_10m_max:[62,28,48],wind_direction_10m_dominant:[140,200,320],precipitation_probability_max:[0,10,70],sunset:['T19:42','T19:43','T19:44'],uv_index_max:[11,9,4]}};
+  var URL='https://api.open-meteo.com/v1/forecast?latitude=-33.92&longitude=18.42&daily=weather_code,temperature_2m_max,temperature_2m_min,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant,precipitation_probability_max,sunset,uv_index_max&timezone=Africa%2FJohannesburg&forecast_days=3';
+  var TITLES={city:'Cape Town & Table Mountain',peninsula:'Cape Peninsula',winelands:'The Winelands'};
+  var data=null, day=0;
+  function cond(c){
+    if(c===0)return['Clear skies','sun'];if(c<=2)return['Mostly sunny','partly'];if(c===3)return['Overcast','cloud'];
+    if(c===45||c===48)return['Misty','cloud'];if(c<=67||(c>=80&&c<=82))return['Rain likely','rain'];if(c>=95)return['Thunderstorms','rain'];return['Mixed','partly'];
+  }
+  var ICONS={sun:'<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="9"/><path d="M24 5v6M24 37v6M5 24h6M37 24h6M10.6 10.6l4.2 4.2M33.2 33.2l4.2 4.2M10.6 37.4l4.2-4.2M33.2 14.8l4.2-4.2"/></svg>',
+    partly:'<svg viewBox="0 0 48 48"><circle cx="18" cy="18" r="7"/><path d="M18 5v4M5 18h4M8.8 8.8l2.8 2.8M27.2 8.8l-2.8 2.8"/><path d="M16 38h20a7 7 0 0 0 0-14 10 10 0 0 0-19 3 6 6 0 0 0-1 11Z"/></svg>',
+    cloud:'<svg viewBox="0 0 48 48"><path d="M13 36h23a8 8 0 0 0 0-16 12 12 0 0 0-23 3 7 7 0 0 0 0 13Z"/></svg>',
+    rain:'<svg viewBox="0 0 48 48"><path d="M13 30h23a8 8 0 0 0 0-16 12 12 0 0 0-23 3 7 7 0 0 0 0 13Z"/><path d="M17 35l-2 6M25 35l-2 6M33 35l-2 6"/></svg>'};
+  function compass(d){return['N','NE','E','SE','S','SW','W','NW'][Math.round(d/45)%8]}
+  function windName(d,w){
+    if(w<15)return'Light winds: a rare, calm Cape day.';
+    if(d>=100&&d<=170)return'South-easter (the "Cape Doctor"): clear skies but windy on the Atlantic side, and the famous tablecloth cloud may cover Table Mountain.';
+    if(d>=280&&d<=345)return'North-wester: usually brings cloud and rain with it.';
+    return compass(d)+' wind.';
+  }
+  function pick(i){
+    var D=data.daily,g=D.wind_gusts_10m_max[i],w=D.wind_speed_10m_max[i],dir=D.wind_direction_10m_dominant[i],r=D.precipitation_probability_max[i],c=D.weather_code[i];
+    var se=dir>=100&&dir<=170, wet=r>=50||(c>=51&&c<=82)||c>=95;
+    if(wet)return{k:'winelands',why:'A rainy day on the coast is a perfect day inland: cosy tasting rooms, long lunches and mountain views when the clouds lift.',tips:['Book indoor tastings with a view','Franschhoek is lovely even in the rain','Pack a light rain jacket']};
+    if(g>=55||w>=35)return se?{k:'winelands',why:'Strong south-easter today. The Table Mountain cableway often closes in this wind, and the Atlantic coast is gusty. The Winelands, sheltered by the mountains, will be calmer and sunny.',tips:['Cableway likely closed: check before going','Calmer and warmer inland','Great light for vineyard photos']}
+      :{k:'winelands',why:'Windy across the peninsula today, so a day inland in the Winelands is the comfortable choice.',tips:['Cableway may close in strong wind','Sheltered estates and gardens','Long lunch in Franschhoek']};
+    if(w<25&&g<40&&c<=2)return{k:'city',why:'Clear and calm: the best kind of day for the top of Table Mountain. Go early for the views before the afternoon crowds.',tips:['Take the first cableway if you can','Sunset from Signal Hill at '+hm(D.sunset[i]),'High UV: bring sunscreen and a hat']};
+    return{k:'peninsula',why:'A good day for the coast: moderate wind, decent skies, and plenty to see from Chapman\u2019s Peak to Cape Point.',tips:['Penguins are out all day at Boulders','Hold onto your hat at Cape Point','Late lunch in Kalk Bay']};
+  }
+  function hm(t){var m=String(t).match(/T(\d\d:\d\d)/);return m?m[1]:'–'}
+  function label(i){
+    if(data.daily.time[i]==='d'+i)return['Today','Tomorrow','Day after'][i];
+    var d=new Date(data.daily.time[i]+'T12:00:00');
+    return i===0?'Today':i===1?'Tomorrow':d.toLocaleDateString('en-GB',{weekday:'short'});
+  }
+  function render(){
+    var D=data.daily,i=day,cn=cond(D.weather_code[i]);
+    document.getElementById('wx-icon').innerHTML=ICONS[cn[1]];
+    document.getElementById('wx-temp').textContent=Math.round(D.temperature_2m_max[i])+'°';
+    document.getElementById('wx-cond').textContent=cn[0]+' · low '+Math.round(D.temperature_2m_min[i])+'° · UV '+Math.round(D.uv_index_max[i]);
+    document.getElementById('wx-wind').textContent=Math.round(D.wind_speed_10m_max[i]);
+    document.getElementById('wx-gust').textContent=Math.round(D.wind_gusts_10m_max[i]);
+    document.getElementById('wx-rain').textContent=Math.round(D.precipitation_probability_max[i]);
+    document.getElementById('wx-sunset').textContent=hm(D.sunset[i]);
+    document.getElementById('wx-arrow').style.transform='rotate('+((D.wind_direction_10m_dominant[i]+180)%360)+'deg)';
+    document.getElementById('wx-windname').textContent=windName(D.wind_direction_10m_dominant[i],D.wind_speed_10m_max[i]);
+    var p=pick(i);
+    document.getElementById('pick-eyebrow').textContent='Our pick for '+label(i).toLowerCase();
+    document.getElementById('pick-title').textContent=TITLES[p.k];
+    document.getElementById('pick-why').textContent=p.why;
+    var ul=document.getElementById('pick-tips');ul.innerHTML='';
+    p.tips.forEach(function(t){var li=document.createElement('li');li.innerHTML='<b>◆</b>';li.appendChild(document.createTextNode(t));ul.appendChild(li)});
+    document.getElementById('pick-itin').onclick=function(){if(window.openTour)window.openTour(p.k)};
+    document.getElementById('pick-book').href='https://wa.me/27677414361?text='+encodeURIComponent("Hi Cape Fun, I'd like to book the "+TITLES[p.k]+" tour ("+label(i).toLowerCase()+").");
+    document.querySelectorAll('#wx-days button').forEach(function(b,j){b.classList.toggle('on',j===i)});
+  }
+  function start(d,sample){
+    data=d;
+    var box=document.getElementById('wx-days');box.innerHTML='';
+    for(var i=0;i<3;i++){(function(i){var b=document.createElement('button');b.textContent=label(i);b.onclick=function(){day=i;render()};box.appendChild(b)})(i)}
+    if(sample){document.getElementById('wx-badge').hidden=false;document.getElementById('wx-note').textContent='Sample forecast shown in this preview. On capefuntours.co.za this panel shows the live forecast for Cape Town.'}
+    render();
+  }
+  try{
+    fetch(URL).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){start(d,false)}).catch(function(){start(SAMPLE,true)});
+  }catch(e){start(SAMPLE,true)}
+
+  /* ---------- BUILD YOUR OWN DAY ---------- */
+  var PROJ={"lon0": 18.29, "lat0": -33.86, "K": 0.8290375725550416, "s": 959.4915499462857, "ox": 0.0, "oy": 15.329654763698102};
+  var HOTEL={n:'Your hotel',lon:18.418,lat:-33.918};
+  var STOPS=[
+    {id:'tm',g:'City',n:'Table Mountain',lon:18.403,lat:-33.957,v:90},
+    {id:'sh',g:'City',n:'Signal Hill',lon:18.393,lat:-33.920,v:30},
+    {id:'bk',g:'City',n:'Bo-Kaap',lon:18.415,lat:-33.922,v:40},
+    {id:'va',g:'City',n:'V&A Waterfront',lon:18.421,lat:-33.904,v:60},
+    {id:'kb',g:'City',n:'Kirstenbosch Gardens',lon:18.432,lat:-33.988,v:75},
+    {id:'cb',g:'Atlantic coast',n:'Camps Bay',lon:18.377,lat:-33.951,v:30},
+    {id:'hb',g:'Atlantic coast',n:'Hout Bay',lon:18.352,lat:-34.040,v:45},
+    {id:'cp',g:'Atlantic coast',n:'Chapman\u2019s Peak Drive',lon:18.362,lat:-34.088,v:20},
+    {id:'co',g:'Atlantic coast',n:'Constantia wine estates',lon:18.425,lat:-34.025,v:75},
+    {id:'pt',g:'Deep south',n:'Cape Point',lon:18.493,lat:-34.352,v:120},
+    {id:'bo',g:'Deep south',n:'Boulders Beach penguins',lon:18.452,lat:-34.197,v:50},
+    {id:'kk',g:'Deep south',n:'Kalk Bay',lon:18.450,lat:-34.129,v:60},
+    {id:'mz',g:'Deep south',n:'Muizenberg beach huts',lon:18.471,lat:-34.108,v:20},
+    {id:'st',g:'Winelands',n:'Stellenbosch',lon:18.860,lat:-33.937,v:120},
+    {id:'fh',g:'Winelands',n:'Franschhoek',lon:19.120,lat:-33.913,v:120}
+  ];
+  var sel={};
+  function P(lon,lat){return[PROJ.ox+(lon-PROJ.lon0)*PROJ.K*PROJ.s, PROJ.oy+(PROJ.lat0-lat)*PROJ.s]}
+  function km(a,b){var R=6371,t=Math.PI/180,dl=(b.lat-a.lat)*t,dn=(b.lon-a.lon)*t;var h=Math.sin(dl/2)*Math.sin(dl/2)+Math.cos(a.lat*t)*Math.cos(b.lat*t)*Math.sin(dn/2)*Math.sin(dn/2);return 2*R*Math.asin(Math.sqrt(h))}
+  function vias(a,b){ // avoid crossing False Bay on the way to/from the Winelands
+    var wa=a.lon>18.7,wb=b.lon>18.7,sa=a.lat<-34.05,sb=b.lat<-34.05;
+    if((wa&&sb)||(wb&&sa)){var v=[{lon:18.48,lat:-34.09},{lon:18.62,lat:-33.985}];return wa?v.slice().reverse():v}
+    return[];
+  }
+  function legKm(a,b){var pts=[a].concat(vias(a,b),[b]),d=0;for(var i=1;i<pts.length;i++)d+=km(pts[i-1],pts[i]);return d*1.35}
+  function legMin(a,b){var d=legKm(a,b);return d<20?d/40*60:d/65*60}
+  function tourLen(order){var t=0,prev=HOTEL;order.forEach(function(s){t+=legMin(prev,s);prev=s});return t+legMin(prev,HOTEL)}
+  function bestOrder(list){
+    if(list.length<=1)return list.slice();
+    // nearest neighbour then 2-opt
+    var rest=list.slice(),order=[],cur=HOTEL;
+    while(rest.length){rest.sort(function(a,b){return legMin(cur,a)-legMin(cur,b)});cur=rest.shift();order.push(cur)}
+    var improved=true;
+    while(improved){improved=false;
+      for(var i=0;i<order.length-1;i++)for(var j=i+1;j<order.length;j++){
+        var cand=order.slice(0,i).concat(order.slice(i,j+1).reverse(),order.slice(j+1));
+        if(tourLen(cand)+0.5<tourLen(order)){order=cand;improved=true}
+      }}
+    return order;
+  }
+  function fmt(m){m=Math.round(m/5)*5;var h=Math.floor(m/60),r=m%60;return h?(h+'h'+(r?(' '+(r<10?'0':'')+r):'')):(r+' min')}
+  var svgNS='http://www.w3.org/2000/svg';
+  function el(n,a){var e=document.createElementNS(svgNS,n);for(var k in a)e.setAttribute(k,a[k]);return e}
+  var pinsG=document.getElementById('plan-pins'),routeG=document.getElementById('plan-route'),pinEls={};
+  // hotel marker
+  (function(){var p=P(HOTEL.lon,HOTEL.lat),g=el('g',{});g.appendChild(el('rect',{x:p[0]-7,y:p[1]-7,width:14,height:14,fill:'#ecd2a6',transform:'rotate(45 '+p[0]+' '+p[1]+')'}));pinsG.appendChild(g)})();
+  STOPS.forEach(function(s){
+    var p=P(s.lon,s.lat),g=el('g',{'class':'ppin'});
+    g.appendChild(el('circle',{cx:p[0],cy:p[1],r:9}));
+    var n=el('text',{x:p[0],y:p[1]+3.5,'text-anchor':'middle','class':'n'});g.appendChild(n);
+    var right=s.lon<18.8,lb=el('text',{x:p[0]+(right?14:-14),y:p[1]+4.5,'text-anchor':right?'start':'end','class':'lb'});lb.textContent=s.n;g.appendChild(lb);
+    var t=el('title',{});t.textContent=s.n;g.appendChild(t);
+    g.addEventListener('click',function(){toggle(s.id)});
+    pinsG.appendChild(g);pinEls[s.id]={g:g,n:n};
+  });
+  // chips
+  var groups={},gbox=document.getElementById('plan-groups'),chipEls={};
+  STOPS.forEach(function(s){(groups[s.g]=groups[s.g]||[]).push(s)});
+  Object.keys(groups).forEach(function(k){
+    var d=document.createElement('div');d.className='grp';d.innerHTML='<div class="k"></div><div class="chips"></div>';d.querySelector('.k').textContent=k;
+    groups[k].forEach(function(s){var b=document.createElement('button');b.className='chip';b.textContent=s.n;b.onclick=function(){toggle(s.id)};d.querySelector('.chips').appendChild(b);chipEls[s.id]=b});
+    gbox.appendChild(d);
+  });
+  function toggle(id){if(sel[id])delete sel[id];else sel[id]=1;update()}
+  function update(){
+    var list=STOPS.filter(function(s){return sel[s.id]}),order=bestOrder(list);
+    STOPS.forEach(function(s){var on=!!sel[s.id];chipEls[s.id].classList.toggle('sel',on);pinEls[s.id].g.classList.toggle('sel',on);pinEls[s.id].n.textContent=''});
+    order.forEach(function(s,i){pinEls[s.id].n.textContent=i+1});
+    while(routeG.firstChild)routeG.removeChild(routeG.firstChild);
+    var send=document.getElementById('plan-send');
+    if(!order.length){
+      ['plan-drive','plan-visit','plan-total'].forEach(function(i){document.getElementById(i).textContent='–'});
+      document.getElementById('plan-order').textContent='Choose a few places to start.';
+      document.getElementById('plan-verdict').innerHTML='';send.setAttribute('aria-disabled','true');return;
+    }
+    var pts=[HOTEL],prev=HOTEL;order.forEach(function(s){pts=pts.concat(vias(prev,s),[s]);prev=s});pts=pts.concat(vias(prev,HOTEL),[HOTEL]);
+    var d='M'+pts.map(function(q){var p=P(q.lon,q.lat);return p[0].toFixed(1)+' '+p[1].toFixed(1)}).join(' L');
+    routeG.appendChild(el('path',{d:d,stroke:'#c9a06a','stroke-opacity':'.25','stroke-width':7,'stroke-linejoin':'round','stroke-linecap':'round'}));
+    routeG.appendChild(el('path',{d:d,stroke:'#ecd2a6','stroke-width':2,'stroke-dasharray':'6 6','stroke-linejoin':'round','class':'route'}));
+    var drive=tourLen(order),visit=order.reduce(function(a,s){return a+s.v},0),total=drive+visit;
+    document.getElementById('plan-drive').textContent=fmt(drive);
+    document.getElementById('plan-visit').textContent=fmt(visit);
+    document.getElementById('plan-total').textContent=fmt(total);
+    var o=document.getElementById('plan-order');o.innerHTML='';
+    order.forEach(function(s,i){var b=document.createElement('b');b.textContent=(i+1)+' ';o.appendChild(b);o.appendChild(document.createTextNode(s.n+(i<order.length-1?'  →  ':'')))});
+    var v=document.getElementById('plan-verdict'),label;
+    if(total<=270){label='Half day';v.innerHTML='Half day · from R2,500<small>About '+fmt(total)+' door to door.</small>'}
+    else if(total<=540){label='Full day';v.innerHTML='Full day · from R5,500<small>About '+fmt(total)+' door to door.</small>'}
+    else{label='Two days';v.innerHTML='That\u2019s a lot for one day<small>About '+fmt(total)+'. We\u2019d suggest splitting it over two days, or removing a stop or two.</small>'}
+    var msg="Hi Cape Fun, I'd like to plan a custom day ("+label.toLowerCase()+", about "+fmt(total)+"):\n"+order.map(function(s,i){return(i+1)+'. '+s.n}).join('\n');
+    send.href='https://wa.me/27677414361?text='+encodeURIComponent(msg);send.setAttribute('aria-disabled','false');
+  }
+  document.getElementById('plan-clear').onclick=function(){sel={};update()};
+  update();
+})();
 </script>
 </body>
 </html>
