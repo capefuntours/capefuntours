@@ -223,6 +223,13 @@
     .brand b{display:none !important}
     .tot .big{font-size:2.1rem}
   }
+
+  /* compliance seal */
+  .seal{width:96px;height:96px;flex:none;filter:drop-shadow(0 6px 16px rgba(0,0,0,.5))}
+  .seal-row{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:30px;position:relative;text-align:left}
+  .seal-row .st{font-family:var(--serif);font-size:1.25rem;line-height:1.2;color:var(--gold-hi)}
+  .seal-row .sd{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  @media(max-width:560px){.seal{width:76px;height:76px}.seal-row .st{font-size:1.1rem}}
 </style>
 </head>
 <body>
@@ -247,6 +254,15 @@
         <a class="btn solid" href="#builder">Build a delegate package</a>
         <a class="btn" href="#proposal">Request a proposal</a>
       </div>
+      <div class="seal-row"><svg class="seal" viewBox="0 0 120 120" role="img" aria-label="Licensed and insured passenger transport">
+  <defs><path id="sealArce1" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/>
+  <linearGradient id="sealGe1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecd2a6"/><stop offset=".6" stop-color="#c9a06a"/><stop offset="1" stop-color="#9a7344"/></linearGradient></defs>
+  <circle cx="60" cy="60" r="57" fill="#101010" stroke="url(#sealGe1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="51" fill="none" stroke="#c9a06a" stroke-opacity=".5" stroke-width="1" stroke-dasharray="2 3"/>
+  <circle cx="60" cy="60" r="33" fill="none" stroke="url(#sealGe1)" stroke-width="1.5"/>
+  <text font-family="Montserrat,sans-serif" font-size="9" fill="#ecd2a6"><textPath textLength="272" lengthAdjust="spacing" href="#sealArce1" startOffset="0">LICENSED · INSURED · CAPE TOWN · </textPath></text>
+  <path d="M46 61l9 9 19-21" fill="none" stroke="url(#sealGe1)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><div><div class="st">Licensed &amp; insured</div><div class="sd">Professional passenger transport</div></div></div>
     </div>
   </section>
 
@@ -254,7 +270,7 @@
     <div><b>Flight tracking</b>We adjust to every delay</div>
     <div><b>Event-branded</b>Meet &amp; greet boards</div>
     <div><b>One WhatsApp group</b>Live updates for your team</div>
-    <div><b>Backup vehicle</b>Partner fleet on standby</div>
+    <div><b>Licensed &amp; insured</b>Professional passenger transport</div>
     <div><b>One invoice</b>Contracted in ZAR</div>
   </div>
 
@@ -268,7 +284,7 @@
         <article>
           <svg class="ic" viewBox="0 0 40 40"><path d="M6 24 34 12M14 20l-4-8 4-1 7 6M20 18l2 12 4-1 1-14"/><path d="M4 34h32"/></svg>
           <h3>Airport arrival &amp; departure</h3>
-          <p>Cape Town International to any city, Waterfront or Atlantic Seaboard hotel.</p>
+          <p>Cape Town International to the city centre.</p>
           <ul><li>Meet &amp; greet with your event's branded board</li><li>Flight tracking, 60 min free waiting</li><li>Water on board, luggage space for all</li></ul>
           <div class="price-tag"><div class="amt gold" data-zar="200">R200</div><div class="per">per delegate, per way</div><div class="alt">Minimum <span data-zar="1000">R1,000</span> per vehicle</div></div>
         </article>
